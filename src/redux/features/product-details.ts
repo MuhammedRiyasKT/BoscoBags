@@ -5,18 +5,20 @@ type InitialState = {
   value: Product;
 };
 
-const initialState = {
+const initialState: InitialState = {
   value: {
     title: "",
-    reviews: 0,
+    offer: "",
+    category: "",
+    categoryImg: "",
+    stock: "",
     price: 0,
     discountedPrice: 0,
-    img: "",
-    images: [],
     id: 0,
-    imgs: { thumbnails: [], previews: [] },
+    imgs: { thumbnails: [] },
+    colors: [],
   },
-} as InitialState;
+};
 
 export const productDetails = createSlice({
   name: "productDetails",

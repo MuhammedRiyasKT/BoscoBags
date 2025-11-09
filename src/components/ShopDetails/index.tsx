@@ -6,22 +6,38 @@ import shopData from "../Shop/shopData";
 import { addItemToCart } from "@/redux/features/cart-slice";
 import { updateproductDetails } from "@/redux/features/product-details";
 import { useDispatch } from "react-redux";
-import { AppDispatch, useAppSelector } from "@/redux/store";
+import { AppDispatch } from "@/redux/store";
 
 const ShopDetails = () => {
   const { id } = useParams();
   const product = shopData.find((item) => item.id === Number(id));
+  const dispatch = useDispatch<AppDispatch>();
+
+  // ✅ Handle "product not found" early and safely
+  const isProductAvailable = !!product;
 
   const [quantity, setQuantity] = useState(30);
-  const [selectedColor, setSelectedColor] = useState(product?.colors?.[0] || null);
+  const [selectedColor, setSelectedColor] = useState(
+    isProductAvailable ? product?.colors?.[0] || null : null
+  );
   const [selectedImage, setSelectedImage] = useState(
-    selectedColor?.imgs?.thumbnails[0] || product?.imgs?.thumbnails[0]
+    isProductAvailable
+      ? selectedColor?.imgs?.thumbnails[0] || product?.imgs?.thumbnails[0]
+      : ""
   );
   const [zoom, setZoom] = useState(false);
   const [zoomPosition, setZoomPosition] = useState({ x: 50, y: 50 });
-  const dispatch = useDispatch<AppDispatch>();
 
-  if (!product) {
+  // ✅ Move useEffect BEFORE any early return — always runs in same order
+  useEffect(() => {
+    if (selectedColor && selectedColor.imgs?.thumbnails) {
+      setSelectedImage(selectedColor.imgs.thumbnails[0]);
+    } else if (product?.imgs?.thumbnails) {
+      setSelectedImage(product.imgs.thumbnails[0]);
+    }
+  }, [selectedColor, product]);
+
+  if (!isProductAvailable) {
     return (
       <div className="text-center py-20 text-red-600 text-lg">
         Product not found!
@@ -38,10 +54,6 @@ const ShopDetails = () => {
     setZoomPosition({ x, y });
   };
 
-  useEffect(() => {
-    setSelectedImage(current.imgs?.thumbnails[0]);
-  }, [selectedColor]);
-
   // Quantity handlers
   const increment = () => setQuantity((prev) => prev + 1);
   const decrement = () => setQuantity((prev) => (prev > 30 ? prev - 1 : 30));
@@ -56,22 +68,20 @@ const ShopDetails = () => {
     }
   };
 
-    const handlePreviewSlider = () => {
-      dispatch(updateproductDetails(product));
-    };
+  const handlePreviewSlider = () => {
+    dispatch(updateproductDetails(product));
+  };
 
-    // Add to cart
-    const handleAddToCart = () => {
-      dispatch(addItemToCart({ ...product, quantity }));
-    };
+  // Add to cart
+  const handleAddToCart = () => {
+    dispatch(addItemToCart({ ...product, quantity }));
+  };
 
   // WhatsApp Order
   const handleWhatsAppOrder = () => {
     const message = `Hi, I'd like to order:\n\nProduct: ${current.title}\nQuantity: ${quantity}\nOriginal Price: ₹${current.price}\nDiscounted Price: ₹${current.discountedPrice}\nOffer: ${current.offer}\n\nPlease confirm availability and delivery.`;
-
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/919745561967?text=${encodedMessage}`;
-
     window.open(whatsappUrl, "_blank");
   };
 
@@ -163,7 +173,8 @@ const ShopDetails = () => {
           <ul className="text-sm text-gray-700 mb-5 space-y-2">
             <li>2 Year Brand Warranty</li>
             <li>
-              <span className="font-medium">Expected Delivery:</span> Within 4 Days
+              <span className="font-medium">Expected Delivery:</span> Within 4
+              Days
             </li>
           </ul>
 
@@ -184,7 +195,12 @@ const ShopDetails = () => {
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 12H4" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M20 12H4"
+                  />
                 </svg>
               </button>
 
@@ -207,7 +223,12 @@ const ShopDetails = () => {
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                  />
                 </svg>
               </button>
             </div>
@@ -215,7 +236,10 @@ const ShopDetails = () => {
 
           {/* Action Buttons */}
           <div className="flex items-center gap-5 mb-6">
-            <button onClick={handleAddToCart} className="bg-green-600 text-black px-7 py-3 rounded-md hover:bg-green-700 transition">
+            <button
+              onClick={handleAddToCart}
+              className="bg-green-600 text-black px-7 py-3 rounded-md hover:bg-green-700 transition"
+            >
               Add to Cart
             </button>
 

@@ -1,19 +1,19 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ShopWithoutSidebar from "@/components/ShopWithoutSidebar";
+import type { Metadata } from "next";
+import Loading from "@/components/Common/Loading";
 
-import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Shop Page | NextCommerce Nextjs E-commerce template",
-  description: "This is Shop Page for NextCommerce Template",
-  // other metadata
+  title: "Shop Page | NextCommerce Next.js E-commerce Template",
+  description: "This is the Shop Page for the NextCommerce Template",
 };
 
-const ShopWithoutSidebarPage = () => {
+export default function ShopWithoutSidebarPage() {
   return (
     <main>
-      <ShopWithoutSidebar />
+      <Suspense fallback={<Loading />}>
+        <ShopWithoutSidebar />
+      </Suspense>
     </main>
   );
-};
-
-export default ShopWithoutSidebarPage;
+}

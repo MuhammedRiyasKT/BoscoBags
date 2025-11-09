@@ -25,8 +25,9 @@ const About = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8 leading-relaxed">
-              With over 30 years of excellence, we've evolved from humble beginnings into India's trusted name for premium, durable bags that stand the test of time.
-            </p>
+  With over 30 years of excellence, we&apos;ve evolved from humble beginnings into India&apos;s trusted name for premium, durable bags that stand the test of time.
+</p>
+
             <div className="flex flex-wrap justify-center gap-4">
               {[
                 { label: "Est. 1995", icon: "📅" },
