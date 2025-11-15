@@ -31,7 +31,7 @@ const NewArrival = () => {
                   strokeLinecap="round"
                 />
               </svg>
-              This Week's
+              This Week&apos;s
             </span>
             <h2 className="font-semibold text-xl xl:text-heading-5 text-dark">
               New Arrivals

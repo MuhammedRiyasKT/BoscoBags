@@ -10,6 +10,7 @@ const initialState: InitialState = {
     title: "",
     offer: "",
     category: "",
+    description: "",
     categoryImg: "",
     stock: "",
     price: 0,
