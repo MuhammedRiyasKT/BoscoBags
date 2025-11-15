@@ -41,25 +41,21 @@ const Header = () => {
   return (
     <header
       className={`fixed left-0 top-0 w-full z-9999 bg-white transition-all ease-in-out duration-300 ${
-        stickyMenu && "shadow"
+        stickyMenu && "shadow py-2"
       }`}
     >
       <div className="max-w-[1170px] mx-auto px-4 sm:px-7.5 xl:px-0">
         {/* <!-- header top start --> */}
-        <div
-          className={`flex items-center justify-between ease-out duration-200 ${
-            stickyMenu ? "py-4" : "py-6"
-          }`}
-        >
+        <div className="flex items-center justify-between py-3">
           {/* <!-- Logo --> */}
           <div className="flex-shrink-0">
             <Link href="/">
               <Image
                 src="/images/logo/logo.png"
                 alt="Logo"
-                width={219}
-                height={36}
-                className="w-32 sm:w-40 lg:w-48 xl:w-219"
+                width={160}
+                height={30}
+                className="w-28 sm:w-32 lg:w-36 xl:w-40"
               />
             </Link>
           </div>
@@ -67,7 +63,7 @@ const Header = () => {
           {/* <!-- Desktop Navigation --> */}
           <div className="hidden xl:flex flex-1 justify-center">
             <nav>
-              <ul className="flex items-center gap-8">
+              <ul className="flex items-center gap-6">
                 {menuData.map((menuItem, i) =>
                   menuItem.submenu ? (
                     <Dropdown
@@ -78,13 +74,11 @@ const Header = () => {
                   ) : (
                     <li
                       key={i}
-                      className="group relative before:w-0 before:h-[3px] before:bg-blue before:absolute before:left-0 before:top-0 before:rounded-b-[3px] before:ease-out before:duration-200 hover:before:w-full"
+                      className="group relative before:w-0 before:h-[2px] before:bg-blue before:absolute before:left-0 before:-bottom-1 before:rounded-b-[2px] before:ease-out before:duration-200 hover:before:w-full"
                     >
                       <Link
                         href={menuItem.path}
-                        className={`hover:text-blue text-custom-sm font-medium text-dark flex py-6 ${
-                          stickyMenu ? "xl:py-4" : "xl:py-6"
-                        }`}
+                        className="hover:text-blue text-custom-sm font-medium text-dark py-1"
                       >
                         {menuItem.title}
                       </Link>
@@ -96,12 +90,12 @@ const Header = () => {
           </div>
 
           {/* <!-- Support Info & Mobile Menu Button --> */}
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-4">
             {/* <!-- Support Info - Hidden on mobile, visible on desktop --> */}
-            <div className="hidden lg:flex items-center gap-3.5">
+            <div className="hidden lg:flex items-center gap-3">
               <svg
-                width="24"
-                height="24"
+                width="20"
+                height="20"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -124,23 +118,23 @@ const Header = () => {
                 />
               </svg>
 
-              <div>
-                <span className="block text-2xs text-dark-4 uppercase">
+              <div className="text-sm">
+                <span className="block text-xs text-dark-4 uppercase">
                   24/7 SUPPORT
                 </span>
-                <p className="font-medium text-custom-sm text-dark">
+                <p className="font-medium text-sm text-dark">
                   +91 9745561967
                 </p>
               </div>
 
               <button
                 onClick={handleOpenCartModal}
-                className="flex items-center gap-2.5"
+                className="flex items-center gap-2"
               >
                 <span className="inline-block relative">
                   <svg
-                    width="24"
-                    height="24"
+                    width="20"
+                    height="20"
                     viewBox="0 0 24 24"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -169,16 +163,16 @@ const Header = () => {
                     />
                   </svg>
 
-                  <span className="flex items-center justify-center font-medium text-2xs absolute -right-2 -top-2.5 bg-blue w-4.5 h-4.5 rounded-full text-white">
+                  <span className="flex items-center justify-center font-medium text-xs absolute -right-1.5 -top-1.5 bg-blue w-4 h-4 rounded-full text-white">
                     {product.length}
                   </span>
                 </span>
 
-                <div>
-                  <span className="block text-2xs text-dark-4 uppercase">
+                <div className="text-sm">
+                  <span className="block text-xs text-dark-4 uppercase">
                     cart
                   </span>
-                  <p className="font-medium text-custom-sm text-dark">
+                  <p className="font-medium text-sm text-dark">
                     ${totalPrice}
                   </p>
                 </div>
@@ -186,15 +180,15 @@ const Header = () => {
             </div>
 
             {/* <!-- Mobile Cart Button - Visible only on mobile --> */}
-            <div className="flex lg:hidden items-center gap-2.5">
+            <div className="flex lg:hidden items-center gap-2">
               <button
                 onClick={handleOpenCartModal}
-                className="flex items-center gap-2"
+                className="flex items-center gap-1.5"
               >
                 <span className="inline-block relative">
                   <svg
-                    width="24"
-                    height="24"
+                    width="20"
+                    height="20"
                     viewBox="0 0 24 24"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -223,7 +217,7 @@ const Header = () => {
                     />
                   </svg>
 
-                  <span className="flex items-center justify-center font-medium text-2xs absolute -right-2 -top-2.5 bg-blue w-4.5 h-4.5 rounded-full text-white">
+                  <span className="flex items-center justify-center font-medium text-xs absolute -right-1.5 -top-1.5 bg-blue w-4 h-4 rounded-full text-white">
                     {product.length}
                   </span>
                 </span>
@@ -237,7 +231,7 @@ const Header = () => {
               className="xl:hidden block"
               onClick={() => setNavigationOpen(!navigationOpen)}
             >
-              <span className="block relative cursor-pointer w-5.5 h-5.5">
+              <span className="block relative cursor-pointer w-5 h-5">
                 <span className="du-block absolute right-0 w-full h-full">
                   <span
                     className={`block relative top-0 left-0 bg-dark rounded-sm w-0 h-0.5 my-1 ease-in-out duration-200 delay-[0] ${
@@ -277,12 +271,12 @@ const Header = () => {
         <div
           className={`xl:hidden absolute left-0 right-0 top-full bg-white shadow-lg border border-gray-3 rounded-md transition-all duration-300 ease-in-out overflow-hidden ${
             navigationOpen
-              ? "max-h-[400px] opacity-100 visible"
+              ? "max-h-[350px] opacity-100 visible"
               : "max-h-0 opacity-0 invisible"
           }`}
         >
-          <nav className="p-5">
-            <ul className="flex flex-col gap-4">
+          <nav className="p-4">
+            <ul className="flex flex-col gap-3">
               {menuData.map((menuItem, i) =>
                 menuItem.submenu ? (
                   <Dropdown
@@ -294,7 +288,7 @@ const Header = () => {
                   <li key={i}>
                     <Link
                       href={menuItem.path}
-                      className="hover:text-blue text-custom-sm font-medium text-dark flex py-2"
+                      className="hover:text-blue text-sm font-medium text-dark flex py-1.5"
                       onClick={() => setNavigationOpen(false)}
                     >
                       {menuItem.title}
@@ -304,15 +298,15 @@ const Header = () => {
               )}
               
               {/* <!-- Mobile Cart Item in Navigation --> */}
-              <li className="border-t border-gray-3 pt-4 mt-2">
+              <li className="border-t border-gray-3 pt-3 mt-1">
                 <button
                   onClick={handleOpenCartModal}
-                  className="flex items-center gap-3 w-full text-left hover:text-blue text-custom-sm font-medium text-dark py-2"
+                  className="flex items-center gap-2 w-full text-left hover:text-blue text-sm font-medium text-dark py-1.5"
                 >
                   <span className="inline-block relative">
                     <svg
-                      width="20"
-                      height="20"
+                      width="18"
+                      height="18"
                       viewBox="0 0 24 24"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -341,7 +335,7 @@ const Header = () => {
                       />
                     </svg>
 
-                    <span className="flex items-center justify-center font-medium text-2xs absolute -right-2 -top-2.5 bg-blue w-4.5 h-4.5 rounded-full text-white">
+                    <span className="flex items-center justify-center font-medium text-xs absolute -right-1 -top-1 bg-blue w-3.5 h-3.5 rounded-full text-white">
                       {product.length}
                     </span>
                   </span>

@@ -2,6 +2,7 @@ export type Product = {
   title: string;
   offer: string; 
   category: string;
+  description : string;
   categoryImg:string;
   stock : string;
   price: number;
@@ -14,6 +15,7 @@ export type Product = {
     title: string;
     offer: string;
     price: number;
+    description: string;
     category:string;
     categoryImg:string;
     stock:string;

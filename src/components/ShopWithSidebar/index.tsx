@@ -74,7 +74,7 @@ const ShopWithSidebar = () => {
       <Breadcrumb
         title={"Explore All Products"}
         pages={["shop", "/", "shop with sidebar"]}
-      />
+       />
 
       <section className="overflow-hidden relative pb-20 pt-5 lg:pt-20 xl:pt-28 bg-[#f3f4f6]">
         <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
@@ -204,10 +204,10 @@ const ShopWithSidebar = () => {
               </div>
 
               {/* Products */}
-              <div
+               <div
                 className={`${
                   productStyle === "grid"
-                    ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-7.5 gap-y-9"
+                    ? "grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-x-7.5 gap-y-9"
                     : "flex flex-col gap-7.5"
                 }`}
               >

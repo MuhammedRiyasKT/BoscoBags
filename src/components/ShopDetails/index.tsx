@@ -13,27 +13,26 @@ const ShopDetails = () => {
   const product = shopData.find((item) => item.id === Number(id));
   const dispatch = useDispatch<AppDispatch>();
 
-  // ✅ Handle "product not found" early and safely
+  // ✅ Handle "product not found"
   const isProductAvailable = !!product;
 
-  const [quantity, setQuantity] = useState(30);
-  const [selectedColor, setSelectedColor] = useState(
-    isProductAvailable ? product?.colors?.[0] || null : null
-  );
+  // ✅ Fix: initially show main product, not color[0]
+  const [selectedColor, setSelectedColor] = useState(null);
+
   const [selectedImage, setSelectedImage] = useState(
-    isProductAvailable
-      ? selectedColor?.imgs?.thumbnails[0] || product?.imgs?.thumbnails[0]
-      : ""
+    isProductAvailable ? product?.imgs?.thumbnails[0] : ""
   );
+
+  const [quantity, setQuantity] = useState(30);
   const [zoom, setZoom] = useState(false);
   const [zoomPosition, setZoomPosition] = useState({ x: 50, y: 50 });
 
-  // ✅ Move useEffect BEFORE any early return — always runs in same order
+  // ✅ Update image when color/product changes
   useEffect(() => {
-    if (selectedColor && selectedColor.imgs?.thumbnails) {
-      setSelectedImage(selectedColor.imgs.thumbnails[0]);
-    } else if (product?.imgs?.thumbnails) {
-      setSelectedImage(product.imgs.thumbnails[0]);
+    if (selectedColor) {
+      setSelectedImage(selectedColor.imgs?.thumbnails[0]);
+    } else if (product) {
+      setSelectedImage(product.imgs?.thumbnails[0]);
     }
   }, [selectedColor, product]);
 
@@ -47,6 +46,7 @@ const ShopDetails = () => {
 
   const current = selectedColor || product;
 
+  // Zoom functionality
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
     const x = ((e.pageX - left) / width) * 100;
@@ -72,12 +72,10 @@ const ShopDetails = () => {
     dispatch(updateproductDetails(product));
   };
 
-  // Add to cart
   const handleAddToCart = () => {
-    dispatch(addItemToCart({ ...product, quantity }));
+    dispatch(addItemToCart({ ...current, quantity }));
   };
 
-  // WhatsApp Order
   const handleWhatsAppOrder = () => {
     const message = `Hi, I'd like to order:\n\nProduct: ${current.title}\nQuantity: ${quantity}\nOriginal Price: ₹${current.price}\nDiscounted Price: ₹${current.discountedPrice}\nOffer: ${current.offer}\n\nPlease confirm availability and delivery.`;
     const encodedMessage = encodeURIComponent(message);
@@ -169,11 +167,10 @@ const ShopDetails = () => {
             performance. Perfect for all your adventures.
           </p>
 
-          {/* Warranty & Delivery Info */}
           <ul className="text-sm text-gray-700 mb-5 space-y-2">
-            <li>2 Year Brand Warranty</li>
+            <li>1 Year Brand Warranty</li>
             <li>
-              <span className="font-medium">Expected Delivery:</span> Within 4
+              <span className="font-medium">Expected Delivery:</span> Within 5
               Days
             </li>
           </ul>
@@ -272,10 +269,10 @@ const ShopDetails = () => {
               <div className="flex flex-wrap gap-5">
                 {product.colors.map((color, index) => (
                   <div
-                    key={`${color.id}-${index}`}
+                    key={`${color.title}-${index}`}
                     onClick={() => setSelectedColor(color)}
                     className={`border rounded-lg p-3 cursor-pointer w-[150px] text-center transition-all ${
-                      selectedColor?.id === color.id
+                      selectedColor?.title === color.title
                         ? "border-green-600 shadow-lg"
                         : "border-gray-200 hover:shadow-md"
                     }`}
@@ -296,10 +293,11 @@ const ShopDetails = () => {
             </>
           )}
 
-          {/* Availability */}
           <p className="text-sm text-gray-500 mt-5">
             Availability:{" "}
-            <span className="text-green-600 font-semibold">45</span>
+            <span className="text-green-600 font-semibold">
+              {current.stock}
+            </span>
           </p>
         </div>
       </div>
