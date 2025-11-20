@@ -20,7 +20,7 @@ const shopData: Product[] = [
     },
     colors: [
       {
-        title: "TOTE BAG (PLAIN bLACK)",
+        title: "TOTE BAG (DARK GREEN)",
         offer: "10%",
         price: 300.0,
         description : "Discover the perfect travel companion with our premium bags, expertly designed for your comfort and style. Crafted with durable, waterproof materials, ensuring both quality and long-lasting performance. Perfect for all your adventures.",
@@ -29,24 +29,6 @@ const shopData: Product[] = [
         category: "tote",
         categoryImg:"/images/categories/categories-01.png",
         stock: "In Stock",
-        imgs: {
-          thumbnails: [
-            "/images/products/product-2-sm-1.png",
-            "/images/products/product-2-sm-2.png",
-            "/images/products/product-2-sm-3.png",
-          ],
-        },
-      },
-      {
-        title: "TOTE BAG (DARK GREEN)",
-        offer: "10%",
-        price: 300.0,
-        discountedPrice: 220.0,
-        description : "Discover the perfect travel companion with our premium bags, expertly designed for your comfort and style. Crafted with durable, waterproof materials, ensuring both quality and long-lasting performance. Perfect for all your adventures.",
-        id: 1,
-        category: "tote",
-        categoryImg:"/images/categories/categories-01.png",
-        stock: "Out of Stock",
         imgs: {
           thumbnails: [
             "/images/products/product-1-sm-1.png",
@@ -65,7 +47,7 @@ const shopData: Product[] = [
     description : "A refined and highly functional side bag featuring a sleek, vertically oriented design. Made from smooth, dark material, it is accented by a unique diagonal contrast panel on the flap. Perfect for professionals and students who need a stylish, compact, and secure way to carry daily essentials like a tablet or notebook.",
     id: 2,
     category: "side",
-    categoryImg:"/images/categories/categories-01.png",
+    categoryImg:"/images/categories/categories-05.png",
     stock: "In Stock",
     imgs: {
       thumbnails: [
@@ -76,32 +58,14 @@ const shopData: Product[] = [
     },
     colors: [
       {
-        title: "VERTICAL MESSENGER BAG (PLAIN BLACK)",
+        title: "VERTICAL MESSENGER BAG (BLACK)",
         offer: "10%",
         price: 200.0,
         discountedPrice: 150.0,
         description : "A refined and highly functional side bag featuring a sleek, vertically oriented design. Made from smooth, dark material, it is accented by a unique diagonal contrast panel on the flap. Perfect for professionals and students who need a stylish, compact, and secure way to carry daily essentials like a tablet or notebook.",
         id: 2,
         category: "tote",
-        categoryImg:"/images/categories/categories-01.png",
-        stock: "In Stock",
-        imgs: {
-          thumbnails: [
-            "/images/products/product-5-sm-1.png",
-            "/images/products/product-5-sm-2.png",
-            "/images/products/product-5-sm-3.png",
-          ],
-        },
-      },
-      {
-        title: "VERTICAL MESSENGER BAG (DARK GREEN)",
-        offer: "10%",
-        price: 200.0,
-        discountedPrice: 150.0,
-        description : "A refined and highly functional side bag featuring a sleek, vertically oriented design. Made from smooth, dark material, it is accented by a unique diagonal contrast panel on the flap. Perfect for professionals and students who need a stylish, compact, and secure way to carry daily essentials like a tablet or notebook.",
-        id: 2,
-        category: "side",
-        categoryImg:"/images/categories/categories-01.png",
+        categoryImg:"/images/categories/categories-05.png",
         stock: "In Stock",
         imgs: {
           thumbnails: [
@@ -121,7 +85,7 @@ const shopData: Product[] = [
     description : "A compact and durable cylindrical bag, perfectly sized for gym sessions or weekend essentials. It is crafted from a sturdy, textured, black synthetic leather (or high-quality canvas) that is easy to clean and designed to maintain its classic barrel shape. The bag features a wide top zipper and an end pocket for efficient packing and organization.",
     id: 3,
     category: "duffel",
-    categoryImg:"/images/categories/categories-01.png",
+    categoryImg:"/images/categories/categories-03.png",
     stock: "In Stock",
     imgs: {
       thumbnails: [
@@ -139,293 +103,13 @@ const shopData: Product[] = [
         description : "A compact and durable cylindrical bag, perfectly sized for gym sessions or weekend essentials. It is crafted from a sturdy, textured, black synthetic leather (or high-quality canvas) that is easy to clean and designed to maintain its classic barrel shape. The bag features a wide top zipper and an end pocket for efficient packing and organization.",
         id: 3,
         category: "packbag",
-        categoryImg:"/images/categories/categories-01.png",
+        categoryImg:"/images/categories/categories-03.png",
         stock: "In Stock",
         imgs: {
           thumbnails: [
             "/images/products/product-6-sm-1.png",
             "/images/products/product-6-sm-2.png",
             "/images/products/product-6-sm-3.png",
-          ],
-        },
-      },
-    ],
-  },
-  {
-    title: "MacBook Air M1 chip, 8/256GB",
-    offer: "10%",
-    price: 59.0,
-    discountedPrice: 29.0,
-    description : "Discover the perfect travel companion with our premium bags, expertly designed for your comfort and style. Crafted with durable, waterproof materials, ensuring both quality and long-lasting performance. Perfect for all your adventures.",
-    id: 4,
-    category: "tote",
-    categoryImg:"/images/categories/categories-01.png",
-    stock: "In Stock",
-    imgs: {
-      thumbnails: [
-        "/images/products/product-4-sm-1.png",
-        "/images/products/product-4-sm-2.png",
-        "/images/products/product-4-sm-3.png",
-      ],
-    },
-    colors: [
-      {
-        title: "MacBook Air M1 - Silver",
-        offer: "10%",
-        price: 59.0,
-        discountedPrice: 29.0,
-        description : "Discover the perfect travel companion with our premium bags, expertly designed for your comfort and style. Crafted with durable, waterproof materials, ensuring both quality and long-lasting performance. Perfect for all your adventures.",
-        id: 4,
-        category: "tote",
-        categoryImg:"/images/categories/categories-01.png",
-        stock: "In Stock",
-        imgs: {
-          thumbnails: [
-            "/images/products/product-4-sm-1.png",
-            "/images/products/product-4-sm-2.png",
-            "/images/products/product-4-sm-3.png",
-          ],
-        },
-      },
-      {
-        title: "MacBook Air M1 - Gold",
-        offer: "10%",
-        price: 59.0,
-        discountedPrice: 29.0,
-        description : "Discover the perfect travel companion with our premium bags, expertly designed for your comfort and style. Crafted with durable, waterproof materials, ensuring both quality and long-lasting performance. Perfect for all your adventures.",
-        id: 4,
-        category: "tote",
-        categoryImg:"/images/categories/categories-01.png",
-        stock: "Out of Stock",
-        imgs: {
-          thumbnails: [
-            "/images/products/product-4-sm-1.png",
-            "/images/products/product-4-sm-2.png",
-            "/images/products/product-4-sm-3.png",
-          ],
-        },
-      },
-    ],
-  },
-  {
-    title: "Apple Watch Ultra",
-    offer: "10%",
-    price: 99.0,
-    discountedPrice: 29.0,
-    description : "Discover the perfect travel companion with our premium bags, expertly designed for your comfort and style. Crafted with durable, waterproof materials, ensuring both quality and long-lasting performance. Perfect for all your adventures.",
-    id: 5,
-    category: "packbag",
-    categoryImg:"/images/categories/categories-01.png",
-    stock: "Out of Stock",
-    imgs: {
-      thumbnails: [
-        "/images/products/product-5-sm-1.png",
-        "/images/products/product-5-sm-2.png",
-        "/images/products/product-5-sm-3.png",
-      ],
-    },
-    colors: [
-      {
-        title: "Apple Watch Ultra - Orange Band",
-        offer: "10%",
-        price: 99.0,
-        discountedPrice: 29.0,
-        description : "Discover the perfect travel companion with our premium bags, expertly designed for your comfort and style. Crafted with durable, waterproof materials, ensuring both quality and long-lasting performance. Perfect for all your adventures.",
-        id: 5,
-        category: "packbag",
-        categoryImg:"/images/categories/categories-01.png",
-        stock: "In Stock",
-        imgs: {
-          thumbnails: [
-            "/images/products/product-5-sm-1.png",
-            "/images/products/product-5-sm-2.png",
-            "/images/products/product-5-sm-3.png",
-          ],
-        },
-      },
-      {
-        title: "Apple Watch Ultra - Green Band",
-        offer: "10%",
-        price: 99.0,
-        discountedPrice: 29.0,
-        description : "Discover the perfect travel companion with our premium bags, expertly designed for your comfort and style. Crafted with durable, waterproof materials, ensuring both quality and long-lasting performance. Perfect for all your adventures.",
-        id: 5,
-        category: "packbag",
-        categoryImg:"/images/categories/categories-01.png",
-        stock: "Out of Stock",
-        imgs: {
-          thumbnails: [
-            "/images/products/product-5-sm-1.png",
-            "/images/products/product-5-sm-2.png",
-            "/images/products/product-5-sm-3.png",
-          ],
-        },
-      },
-    ],
-  },
-  {
-    title: "Logitech MX Master 3 Mouse",
-    offer: "10%",
-    price: 59.0,
-    discountedPrice: 29.0,
-    description : "Discover the perfect travel companion with our premium bags, expertly designed for your comfort and style. Crafted with durable, waterproof materials, ensuring both quality and long-lasting performance. Perfect for all your adventures.",
-    id: 6,
-    category: "tote",
-    categoryImg:"/images/categories/categories-01.png",
-    stock: "In Stock",
-    imgs: {
-      thumbnails: [
-        "/images/products/product-6-sm-1.png",
-        "/images/products/product-6-sm-2.png",
-        "/images/products/product-6-sm-3.png",
-      ],
-    },
-    colors: [
-      {
-        title: "Logitech MX Master 3 - Graphite",
-        offer: "10%",
-        price: 59.0,
-        discountedPrice: 29.0,
-        description : "Discover the perfect travel companion with our premium bags, expertly designed for your comfort and style. Crafted with durable, waterproof materials, ensuring both quality and long-lasting performance. Perfect for all your adventures.",
-        id: 6,
-        category: "tote",
-        categoryImg:"/images/categories/categories-01.png",
-        stock: "In Stock",
-        imgs: {
-          thumbnails: [
-            "/images/products/product-6-sm-1.png",
-            "/images/products/product-6-sm-2.png",
-            "/images/products/product-6-sm-3.png",
-          ],
-        },
-      },
-      {
-        title: "Logitech MX Master 3 - Pale Grey",
-        offer: "10%",
-        price: 59.0,
-        discountedPrice: 29.0,
-        description : "Discover the perfect travel companion with our premium bags, expertly designed for your comfort and style. Crafted with durable, waterproof materials, ensuring both quality and long-lasting performance. Perfect for all your adventures.",
-        id: 6,
-        category: "tote",
-        categoryImg:"/images/categories/categories-01.png",
-        stock: "Out of Stock",
-        imgs: {
-          thumbnails: [
-            "/images/products/product-6-sm-1.png",
-            "/images/products/product-6-sm-2.png",
-            "/images/products/product-6-sm-3.png",
-          ],
-        },
-      },
-    ],
-  },
-  {
-    title: "Apple iPad Air 5th Gen - 64GB",
-    offer: "10%",
-    price: 59.0,
-    discountedPrice: 29.0,
-    description : "Discover the perfect travel companion with our premium bags, expertly designed for your comfort and style. Crafted with durable, waterproof materials, ensuring both quality and long-lasting performance. Perfect for all your adventures.",
-    id: 7,
-    category: "packbag",
-    categoryImg:"/images/categories/categories-01.png",
-    stock: "In Stock",
-    imgs: {
-      thumbnails: [
-        "/images/products/product-7-sm-1.png",
-        "/images/products/product-7-sm-2.png",
-        "/images/products/product-7-sm-3.png",
-      ],
-    },
-    colors: [
-      {
-        title: "iPad Air - Blue",
-        offer: "10%",
-        price: 59.0,
-        discountedPrice: 29.0,
-        description : "Discover the perfect travel companion with our premium bags, expertly designed for your comfort and style. Crafted with durable, waterproof materials, ensuring both quality and long-lasting performance. Perfect for all your adventures.",
-        id: 7,
-        category: "packbag",
-        categoryImg:"/images/categories/categories-01.png",
-        stock: "In Stock",
-        imgs: {
-          thumbnails: [
-            "/images/products/product-7-sm-1.png",
-            "/images/products/product-7-sm-2.png",
-            "/images/products/product-7-sm-3.png",
-          ],
-        },
-      },
-      {
-        title: "iPad Air - Purple",
-        offer: "10%",
-        price: 59.0,
-        discountedPrice: 29.0,
-        description : "Discover the perfect travel companion with our premium bags, expertly designed for your comfort and style. Crafted with durable, waterproof materials, ensuring both quality and long-lasting performance. Perfect for all your adventures.",
-        id: 7,
-        category: "packbag",
-        categoryImg:"/images/categories/categories-01.png",
-        stock: "Out of Stock",
-        imgs: {
-          thumbnails: [
-            "/images/products/product-7-sm-1.png",
-            "/images/products/product-7-sm-2.png",
-            "/images/products/product-7-sm-3.png",
-          ],
-        },
-      },
-    ],
-  },
-  {
-    title: "Asus RT Dual Band Router",
-    offer: "10%",
-    price: 59.0,
-    discountedPrice: 29.0,
-    description : "Discover the perfect travel companion with our premium bags, expertly designed for your comfort and style. Crafted with durable, waterproof materials, ensuring both quality and long-lasting performance. Perfect for all your adventures.",
-    id: 8,
-    category: "tote",
-    categoryImg:"/images/categories/categories-01.png",
-    stock: "Out of Stock",
-    imgs: {
-      thumbnails: [
-        "/images/products/product-8-sm-1.png",
-        "/images/products/product-8-sm-2.png",
-        "/images/products/product-8-sm-3.png",
-      ],
-    },
-    colors: [
-      {
-        title: "Asus Router - Black",
-        offer: "10%",
-        price: 59.0,
-        discountedPrice: 29.0,
-        description : "Discover the perfect travel companion with our premium bags, expertly designed for your comfort and style. Crafted with durable, waterproof materials, ensuring both quality and long-lasting performance. Perfect for all your adventures.",
-        id: 8,
-        category: "tote",
-        categoryImg:"/images/categories/categories-01.png",
-        stock: "In Stock",
-        imgs: {
-          thumbnails: [
-            "/images/products/product-8-sm-1.png",
-            "/images/products/product-8-sm-2.png",
-            "/images/products/product-8-sm-3.png",
-          ],
-        },
-      },
-      {
-        title: "Asus Router - White",
-        offer: "10%",
-        price: 59.0,
-        discountedPrice: 29.0,
-        description : "Discover the perfect travel companion with our premium bags, expertly designed for your comfort and style. Crafted with durable, waterproof materials, ensuring both quality and long-lasting performance. Perfect for all your adventures.",
-        id: 8,
-        category: "tote",
-        categoryImg:"/images/categories/categories-01.png",
-        stock: "Out of Stock",
-        imgs: {
-          thumbnails: [
-            "/images/products/product-8-sm-1.png",
-            "/images/products/product-8-sm-2.png",
-            "/images/products/product-8-sm-3.png",
           ],
         },
       },

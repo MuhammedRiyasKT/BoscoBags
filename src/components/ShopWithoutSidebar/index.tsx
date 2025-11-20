@@ -94,7 +94,7 @@ const ShopWithoutSidebar = () => {
               <div className="rounded-lg bg-white shadow-1 pl-3 pr-2.5 py-2.5 mb-6">
                 <div className="flex items-center justify-between">
                   {/* <!-- top bar left --> */}
-                  <div className="flex flex-wrap items-center gap-4">
+                  {/* <div className="flex flex-wrap items-center gap-4">
                     <CustomSelect options={options} />
 
                     <p>
@@ -107,7 +107,7 @@ const ShopWithoutSidebar = () => {
                         </span>
                       )}
                     </p>
-                  </div>
+                  </div> */}
 
                   {/* <!-- top bar right --> */}
                   <div className="flex items-center gap-2.5">
@@ -191,10 +191,10 @@ const ShopWithoutSidebar = () => {
               </div>
 
               {/* <!-- Products Grid Tab Content Start --> */}
-               <div
+              <div
                 className={`${
                   productStyle === "grid"
-                    ? "grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-x-7.5 gap-y-9"
+                    ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-7.5 gap-y-9"
                     : "flex flex-col gap-7.5"
                 }`}
               >
