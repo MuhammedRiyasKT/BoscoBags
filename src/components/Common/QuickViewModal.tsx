@@ -135,7 +135,7 @@ const QuickViewModal = () => {
           activePreview === key ? "block" : "hidden"
         }`}
       >
-        <button
+        {/* <button
           onClick={handlePreviewSlider}
           aria-label="zoom"
           className="w-10 h-10 rounded-[5px] bg-white shadow-1 flex items-center justify-center ease-out duration-200 text-dark hover:text-blue absolute top-4 lg:top-8 right-4 lg:right-8 z-50"
@@ -155,7 +155,7 @@ const QuickViewModal = () => {
               fill=""
             />
           </svg>
-        </button>
+        </button> */}
         <Image
           src={img || ""}
           alt={`${product.title} - Image ${key + 1}`}

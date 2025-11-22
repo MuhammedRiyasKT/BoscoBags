@@ -191,35 +191,37 @@ const ShopWithoutSidebar = () => {
               </div>
 
               {/* <!-- Products Grid Tab Content Start --> */}
-              <div
-                className={`${
-                  productStyle === "grid"
-                    ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-7.5 gap-y-9"
-                    : "flex flex-col gap-7.5"
-                }`}
-              >
-                {filteredProducts.length > 0 ? (
-                  filteredProducts.map((item, key) =>
-                    productStyle === "grid" ? (
-                      <SingleGridItem item={item} key={key} />
-                    ) : (
-                      <SingleListItem item={item} key={key} />
-                    )
-                  )
-                ) : (
-                  <div className="col-span-full text-center py-12">
-                    <div className="text-gray-4 text-lg mb-4">
-                      No products found in this category
-                    </div>
-                    <button
-                      onClick={clearCategoryFilter}
-                      className="inline-flex font-medium text-white bg-blue py-3 px-7 rounded-md ease-out duration-200 hover:bg-blue-dark"
-                    >
-                      View All Products
-                    </button>
-                  </div>
-                )}
-              </div>
+
+<div
+  className={`${
+    productStyle === "grid"
+      ? "grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-x-7.5 gap-y-9"
+      : "flex flex-col gap-7.5"
+  }`}
+>
+  {filteredProducts.length > 0 ? (
+    filteredProducts.map((item, key) =>
+      productStyle === "grid" ? (
+        <SingleGridItem item={item} key={key} />
+      ) : (
+        <SingleListItem item={item} key={key} />
+      )
+    )
+  ) : (
+    <div className="col-span-full text-center py-12">
+      <div className="text-gray-4 text-lg mb-4">
+        No products found in this category
+      </div>
+      <button
+        onClick={clearCategoryFilter}
+        className="inline-flex font-medium text-white bg-blue py-3 px-7 rounded-md ease-out duration-200 hover:bg-blue-dark"
+      >
+        View All Products
+      </button>
+    </div>
+  )}
+</div>
+
               {/* <!-- Products Grid Tab Content End --> */}
 
               {/* <!-- Products Pagination Start --> */}

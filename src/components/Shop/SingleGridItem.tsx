@@ -25,7 +25,7 @@ const SingleGridItem = ({ item }: { item: Product }) => {
     dispatch(
       addItemToCart({
         ...item,
-        quantity: 1,
+        quantity: 30,
       })
     );
   };
@@ -85,9 +85,30 @@ const SingleGridItem = ({ item }: { item: Product }) => {
           {/* Add to Cart */}
           <button
             onClick={handleAddToCart}
-            className="inline-flex font-medium text-custom-sm py-[7px] px-5 rounded-[5px] bg-blue text-white hover:bg-blue-dark transition"
+            aria-label="Add to cart"
+            // CHANGED: bg-blue/text-white/hover:bg-blue-dark to bg-white/text-dark/hover:text-blue
+            className="flex items-center justify-center w-9 h-9 rounded-[5px] shadow-1 bg-white text-dark hover:text-blue transition" 
           >
-            Add to cart
+            <svg
+              className="fill-current w-4 h-4"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              {/* Shopping Cart Icon Path */}
+              <path
+                d="M1 2V3H2.2L3.8 11.1A1 1 0 0 0 4.75 12H13.85A1 1 0 0 0 14.8 11.1L15.9 5.3A1 1 0 0 0 15 4H4.5L3.5 2H1Z"
+                fill=""
+              />
+              <path
+                d="M4 14C4 14.8284 3.32843 15.5 2.5 15.5C1.67157 15.5 1 14.8284 1 14C1 13.1716 1.67157 12.5 2.5 12.5C3.32843 12.5 4 13.1716 4 14Z"
+                fill=""
+              />
+              <path
+                d="M14 14C14 14.8284 13.3284 15.5 12.5 15.5C11.6716 15.5 11 14.8284 11 14C11 13.1716 11.6716 12.5 12.5 12.5C13.3284 12.5 14 13.1716 14 14Z"
+                fill=""
+              />
+            </svg>
           </button>
         </div>
       </div>

@@ -36,7 +36,7 @@ const SingleItem = ({ item }: { item: Product }) => {
 
   return (
     <div className="group">
-      <div className="relative overflow-hidden rounded-lg bg-[#F6F7FB] min-h-[403px]">
+      <div className="relative overflow-hidden rounded-lg bg-[#FFFFFF] min-h-[403px]">
         {/* Offer Badge */}
         {item.offer && (
           <span className="absolute top-3 left-3 z-10 inline-block px-3 py-1 text-xs font-medium text-white bg-green-600 rounded-full">
