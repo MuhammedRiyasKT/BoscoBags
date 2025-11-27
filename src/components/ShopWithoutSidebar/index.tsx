@@ -43,6 +43,7 @@ const ShopWithoutSidebar = () => {
     // You might want to update the URL here as well
     window.history.pushState({}, '', '/shop-without-sidebar');
   };
+  
 
   return (
     <>

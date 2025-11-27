@@ -29,30 +29,30 @@ const HeroCarousal = () => {
           <div className="max-w-[394px] py-10 sm:py-15 lg:py-24.5 pl-4 sm:pl-7.5 lg:pl-12.5">
             <div className="flex items-center gap-4 mb-7.5 sm:mb-10">
               <span className="block font-semibold text-heading-3 sm:text-heading-1 text-blue">
-        25%
-      </span>
+                25%
+              </span>
               <span className="block text-dark text-sm sm:text-custom-1 sm:leading-[24px]">
-        Special
-        <br />
-        Offer
-      </span>
+                Special
+                <br />
+                Offer
+              </span>
             </div>
 
             <h1 className="font-semibold text-dark text-xl sm:text-3xl mb-3">
-      <a href="#">Stylish & Durable Backpack for Everyday Use</a>
-    </h1>
+              <a href="#">Stylish & Durable Backpack for Everyday Use</a>
+            </h1>
 
             <p>
-      Discover comfort and quality with our premium backpack — perfect for work, travel, or study. 
-      Designed with durable fabric, spacious compartments, and a sleek modern look to match your lifestyle.
-    </p>
+              Discover comfort and quality with our premium backpack — perfect for work, travel, or study.
+              Designed with durable fabric, spacious compartments, and a sleek modern look to match your lifestyle.
+            </p>
 
             <Link
-  href="/shop-with-sidebar"
-  className="inline-flex font-medium text-white text-custom-sm rounded-md bg-dark py-3 px-9 ease-out duration-200 hover:bg-blue mt-10"
->
-  Shop Now
-</Link>
+              href="/shop-with-sidebar"
+              className="inline-flex font-medium text-white text-custom-sm rounded-md bg-dark py-3 px-9 ease-out duration-200 hover:bg-blue mt-10"
+            >
+              Shop Now
+            </Link>
           </div>
 
           <div>
@@ -69,34 +69,34 @@ const HeroCarousal = () => {
         {" "}
         <div className="flex items-center pt-6 sm:pt-0 flex-col-reverse sm:flex-row">
           <div className="max-w-[394px] py-10 sm:py-15 lg:py-26 pl-4 sm:pl-7.5 lg:pl-12.5">
-  <div className="flex items-center gap-4 mb-7.5 sm:mb-10">
-    <span className="block font-semibold text-heading-3 sm:text-heading-1 text-blue">
-      20%
-    </span>
-    <span className="block text-dark text-sm sm:text-custom-1 sm:leading-[24px]">
-      Limited
-      <br />
-      Offer
-    </span>
-  </div>
+            <div className="flex items-center gap-4 mb-7.5 sm:mb-10">
+              <span className="block font-semibold text-heading-3 sm:text-heading-1 text-blue">
+                20%
+              </span>
+              <span className="block text-dark text-sm sm:text-custom-1 sm:leading-[24px]">
+                Limited
+                <br />
+                Offer
+              </span>
+            </div>
 
-  <h1 className="font-semibold text-dark text-xl sm:text-3xl mb-3">
-    <a href="#">Elegant & Durable Tote Bag for Everyday Style</a>
-  </h1>
+            <h1 className="font-semibold text-dark text-xl sm:text-3xl mb-3">
+              <a href="#">Elegant & Durable Tote Bag for Everyday Style</a>
+            </h1>
 
-  <p>
-    Carry your essentials in comfort and style with this premium tote bag. 
-    Made from durable materials with spacious compartments — perfect for work, 
-    travel, or casual outings.
-  </p>
+            <p>
+              Carry your essentials in comfort and style with this premium tote bag.
+              Made from durable materials with spacious compartments — perfect for work,
+              travel, or casual outings.
+            </p>
 
-  <a
-    href="#"
-    className="inline-flex font-medium text-white text-custom-sm rounded-md bg-dark py-3 px-9 ease-out duration-200 hover:bg-blue mt-10"
-  >
-    Shop Now
-  </a>
-</div>
+            <a
+              href="#"
+              className="inline-flex font-medium text-white text-custom-sm rounded-md bg-dark py-3 px-9 ease-out duration-200 hover:bg-blue mt-10"
+            >
+              Shop Now
+            </a>
+          </div>
 
 
           <div>

@@ -6,6 +6,7 @@ import { updateQuickView } from "@/redux/features/quickView-slice";
 import { addItemToCart } from "@/redux/features/cart-slice";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "@/redux/store";
+import { updateproductDetails } from "@/redux/features/product-details";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -30,6 +31,11 @@ const SingleGridItem = ({ item }: { item: Product }) => {
     );
   };
 
+    // Product Details
+    const handleProductDetails = () => {
+      dispatch(updateproductDetails({ ...item }));
+    };
+
   return (
     <div className="group">
       <div className="relative overflow-hidden flex items-center justify-center rounded-lg bg-white shadow-1 min-h-[270px] mb-4">
@@ -40,13 +46,15 @@ const SingleGridItem = ({ item }: { item: Product }) => {
           </div>
         )}
 
-        <Image
+        <Link href={`/shop-details/${item.id}`} onClick={handleProductDetails}>
+          <Image
           src={item.imgs.thumbnails[0]}
           alt={item.title}
           width={250}
           height={250}
           className="object-contain"
         />
+        </Link>
 
         {/* Hover Actions */}
         <div className="absolute left-0 bottom-0 translate-y-full w-full flex items-center justify-center gap-2.5 pb-5 ease-linear duration-200 group-hover:translate-y-0">

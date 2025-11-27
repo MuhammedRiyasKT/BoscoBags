@@ -45,52 +45,65 @@ const About = () => {
       </section>
 
       {/* Story Section */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-[1170px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div className="relative">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                <div className="aspect-[4/3] bg-gradient-to-br from-blue-100 to-gray-200 flex items-center justify-center">
-                  <span className="text-gray-500 text-lg">Our Story Image</span>
-                </div>
-                <div className="absolute -bottom-6 -right-6 bg-blue text-white p-6 rounded-2xl shadow-xl">
-                  <div className="text-3xl font-bold">30+</div>
-                  <div className="text-sm">Years Experience</div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="lg:pl-8">
-              <div className="inline-flex items-center gap-2 text-blue font-semibold text-sm uppercase tracking-wider mb-4">
-                <div className="w-4 h-0.5 bg-blue"></div>
-                Our Journey
-              </div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                From Humble Beginnings to National Recognition
-              </h2>
-              <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
-                <p>
-                  Founded in 1995, Bosco Bags has over 30 years of rich experience in the bag manufacturing industry. What started as a small workshop has blossomed into a trusted national brand.
-                </p>
-                <p>
-                  Today, we proudly supply our premium products across India, serving both retail and wholesale markets with unwavering commitment to quality and customer satisfaction.
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-2 gap-6 mt-8">
-                <div className="text-center p-4 bg-gray-50 rounded-2xl">
-                  <div className="text-2xl font-bold text-blue mb-1">500+</div>
-                  <div className="text-sm text-gray-600">Products Designed</div>
-                </div>
-                <div className="text-center p-4 bg-gray-50 rounded-2xl">
-                  <div className="text-2xl font-bold text-blue mb-1">50K+</div>
-                  <div className="text-sm text-gray-600">Happy Customers</div>
-                </div>
-              </div>
-            </div>
+     <section className="py-16 lg:py-24 bg-white">
+  <div className="max-w-[1170px] mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      
+      <div className="relative">
+        <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+          <img 
+            src="/images/logo/about.png"
+            alt="Our Story" 
+            className="w-full h-full object-cover aspect-[4/3]"
+          />
+          
+          <div className="absolute -bottom-6 -right-6 bg-blue text-white p-6 rounded-2xl shadow-xl">
+            <div className="text-3xl font-bold">30+</div>
+            <div className="text-sm">Years Experience</div>
           </div>
         </div>
-      </section>
+      </div>
+
+      <div className="lg:pl-8">
+        <div className="inline-flex items-center gap-2 text-blue font-semibold text-sm uppercase tracking-wider mb-4">
+          <div className="w-4 h-0.5 bg-blue"></div>
+          Our Journey
+        </div>
+
+        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+          From Humble Beginnings to National Recognition
+        </h2>
+
+        <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
+          <p>
+            Founded in 1995, Bosco Bags has over 30 years of rich experience in
+            the bag manufacturing industry. What started as a small workshop has
+            blossomed into a trusted national brand.
+          </p>
+          <p>
+            Today, we proudly supply our premium products across India, serving
+            both retail and wholesale markets with unwavering commitment to
+            quality and customer satisfaction.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-2 gap-6 mt-8">
+          <div className="text-center p-4 bg-gray-50 rounded-2xl">
+            <div className="text-2xl font-bold text-blue mb-1">500+</div>
+            <div className="text-sm text-gray-600">Products Designed</div>
+          </div>
+          
+          <div className="text-center p-4 bg-gray-50 rounded-2xl">
+            <div className="text-2xl font-bold text-blue mb-1">50K+</div>
+            <div className="text-sm text-gray-600">Happy Customers</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
       {/* Specialties Section */}
       <section className="py-16 lg:py-24 bg-gray-50">
@@ -282,43 +295,50 @@ const About = () => {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-            {[
-              {
-                name: "Aboobacker",
-                role: "Founder & Owner",
-                desc: "Rashid Master",
-                expertise: "30+ Years Experience"
-              },
-              {
-                name: "Rahool",
-                role: "Quality Manager",
-                expertise: "Quality Assurance Expert"
-              },
-              {
-                name: "Kannan",
-                role: "Finishing Specialist",
-                expertise: "Craftsmanship Perfectionist"
-              }
-            ].map((member, index) => (
-              <div key={index} className="group text-center">
-                <div className="relative mb-6">
-                  <div className="w-32 h-32 mx-auto bg-gradient-to-br from-gray-200 to-gray-300 rounded-full overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow duration-300">
-                    <div className="w-full h-full flex items-center justify-center text-gray-500">
-                      <span className="text-sm">Photo</span>
-                    </div>
-                  </div>
-                  <div className="absolute -bottom-2 -right-2 bg-blue text-white px-3 py-1 rounded-full text-sm font-medium shadow-lg">
-                    {member.expertise}
-                  </div>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">{member.name}</h3>
-                <p className="text-blue font-semibold mb-3">{member.role}</p>
-                {member.desc && (
-                  <p className="text-gray-600 text-sm">{member.desc}</p>
-                )}
-              </div>
-            ))}
-          </div>
+  {[
+    {
+      name: "Aboobacker",
+      role: "Founder & Owner",
+      expertise: "30+ Years Experience",
+      img: "/images/team/team-1.jpg"
+    },
+    {
+      name: "Rashid",
+      role: "Marketing Manager",
+      expertise: "Marketing Expert",
+      img: "/images/team/team-2.jpg"
+    },
+    {
+      name: "Rahoof",
+      role: "Sales Manager",
+      expertise: "Sales Expert",
+      img: "/images/team/team-3.jpg"
+    }
+  ].map((member, index) => (
+    <div key={index} className="group text-center">
+      <div className="relative mb-6">
+        <div className="w-32 h-32 mx-auto bg-gradient-to-br from-gray-200 to-gray-300 rounded-full overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow duration-300">
+          <img
+            src={member.img}
+            alt={member.name}
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="absolute -bottom-2 -right-2 bg-blue text-white px-3 py-1 rounded-full text-sm font-medium shadow-lg">
+          {member.expertise}
+        </div>
+      </div>
+
+      <h3 className="text-2xl font-bold text-gray-900 mb-2">{member.name}</h3>
+      <p className="text-blue font-semibold mb-3">{member.role}</p>
+
+      {member.desc && (
+        <p className="text-gray-600 text-sm">{member.desc}</p>
+      )}
+    </div>
+  ))}
+</div>
+
         </div>
       </section>
 
