@@ -331,10 +331,6 @@ const About = () => {
 
       <h3 className="text-2xl font-bold text-gray-900 mb-2">{member.name}</h3>
       <p className="text-blue font-semibold mb-3">{member.role}</p>
-
-      {member.desc && (
-        <p className="text-gray-600 text-sm">{member.desc}</p>
-      )}
     </div>
   ))}
 </div>
