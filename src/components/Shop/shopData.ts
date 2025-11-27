@@ -115,6 +115,82 @@ const shopData: Product[] = [
       },
     ],
   },
+  {
+    title: "Neon Graphic Rope Bag",
+    offer: "10%",
+    price: 200.0,
+    discountedPrice: 100.0,
+    description : "This neon-themed rope bag is made from durable, lightweight polyester fabric and features high-quality custom printing on the front panel. Designed with strong rope straps and a smooth drawstring closure, it offers a spacious single compartment perfect for everyday use, sports, school, and travel.",
+    id: 4,
+    category: "rope",
+    categoryImg:"/images/categories/categories-06.png",
+    stock: "In Stock",
+    imgs: {
+      thumbnails: [
+        "/images/products/product-2-sm-1.png",
+        "/images/products/product-2-sm-2.png",
+        "/images/products/product-2-sm-3.png",
+      ],
+    },
+    colors: [
+      {
+        title: "Neon Graphic Rope Bag",
+        offer: "10%",
+        price: 200.0,
+        discountedPrice: 100.0,
+        description : "This neon-themed rope bag is made from durable, lightweight polyester fabric and features high-quality custom printing on the front panel. Designed with strong rope straps and a smooth drawstring closure, it offers a spacious single compartment perfect for everyday use, sports, school, and travel.",
+        id: 4,
+        category: "rope",
+        categoryImg:"/images/categories/categories-06.png",
+        stock: "In Stock",
+        imgs: {
+          thumbnails: [
+            "/images/products/product-2-sm-1.png",
+            "/images/products/product-2-sm-2.png",
+            "/images/products/product-2-sm-3.png",
+          ],
+        },
+      },
+    ],
+  },
+  {
+    title: "Large Outdoor Trekking & Travel Backpack",
+    offer: "10%",
+    price: 600.0,
+    discountedPrice: 500.0,
+    description : "This large outdoor trekking backpack is made from durable, water-resistant polyester fabric, designed to handle heavy use during travel, hiking, and camping. It features multiple compartments, front-access zippers, adjustable straps, and printed graphics on the front panel for a sporty look.",
+    id: 5,
+    category: "travel",
+    categoryImg:"/images/categories/categories-07.png",
+    stock: "In Stock",
+    imgs: {
+      thumbnails: [
+        "/images/products/product-3-sm-1.png",
+        "/images/products/product-3-sm-2.png",
+        "/images/products/product-3-sm-3.png",
+      ],
+    },
+    colors: [
+      {
+        title: "Large Outdoor Trekking & Travel Backpack",
+        offer: "10%",
+        price: 600.0,
+        discountedPrice: 500.0,
+        description : "This large outdoor trekking backpack is made from durable, water-resistant polyester fabric, designed to handle heavy use during travel, hiking, and camping. It features multiple compartments, front-access zippers, adjustable straps, and printed graphics on the front panel for a sporty look.",
+        id: 5,
+        category: "travel",
+        categoryImg:"/images/categories/categories-07.png",
+        stock: "In Stock",
+        imgs: {
+          thumbnails: [
+            "/images/products/product-3-sm-1.png",
+            "/images/products/product-3-sm-2.png",
+            "/images/products/product-3-sm-3.png",
+          ],
+        },
+      },
+    ],
+  },
 ];
 
 export default shopData;
